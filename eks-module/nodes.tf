@@ -7,7 +7,7 @@ data "terraform_remote_state" "vpc" {
 }
 
 
-# Data block to read the local VPC tfstate file
+# Data block to read the local IAM tfstate file
 data "terraform_remote_state" "iam" {
   backend = "local"
   config = {

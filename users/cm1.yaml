@@ -8,21 +8,21 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::453062099228:role/eks-node-group-nodes
+      rolearn: arn:aws:iam::876024076176:role/var.node_role_name
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
-    - userarn: arn:aws:iam::453062099228:user/developer1
+    - userarn: arn:aws:iam::876024076176:user/developer1
       username: developer1
       groups:
       - reader
-    - userarn: arn:aws:iam::453062099228:user/manager
+    - userarn: arn:aws:iam::876024076176:user/manager
       username: manager
       groups:
       - system:masters
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2023-10-12T03:56:03Z"
+  creationTimestamp: "2023-11-18T20:53:27Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "19607"
-  uid: b4175065-8400-4441-a58c-77d0a58d70bd
+  resourceVersion: "982"
+  uid: ac0dbda9-2ed0-4f3e-885d-e0db6928d172
